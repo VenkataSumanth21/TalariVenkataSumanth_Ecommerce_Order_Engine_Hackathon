@@ -1,6 +1,5 @@
-# 🛒 Distributed E-Commerce Order Engine (CLI)
-
-## 📌 Project Overview
+ Distributed E-Commerce Order Engine (CLI)
+ Project Overview
 
 This project is a **CLI-based backend simulation** of a distributed e-commerce order processing system.
 It is designed to mimic real-world backend challenges such as inventory conflicts, payment failures, transaction rollback, and order lifecycle management.
@@ -9,59 +8,59 @@ The system demonstrates strong backend engineering concepts like **data consiste
 
 ---
 
-## 🚀 Features
+ Features
 
-### 🛍️ Product Management
+ Product Management
 
 * Add new products
 * Prevent duplicate product IDs
 * Update stock
 
-### 🧺 Cart System
+ Cart System
 
 * Separate cart for each user
 * Add/remove items
 * Update item quantities
 * Calculate cart total
 
-### 📦 Order Placement Engine
+Order Placement Engine
 
 * Validate cart before order
 * Calculate total price
 * Apply coupon discounts
 * Create order
 
-### 💳 Payment Simulation
+ Payment Simulation
 
 * Simulates real-world payment success/failure
 * Randomized outcomes
 * Integrated failure handling
 
-### 🔒 Inventory Management
+ Inventory Management
 
 * Reserve stock before payment
 * Prevent overselling
 * Restore stock on failure
 
-### 🔁 Transaction Rollback
+Transaction Rollback
 
 * If payment fails:
 
   * Restore inventory
   * Cancel order safely
 
-### 🎟️ Coupon System
+ Coupon System
 
 * `SAVE10` → 10% discount
 * `FLAT200` → ₹200 discount
 
-### 📄 Order Management
+ Order Management
 
 * View all orders
 * Cancel order
 * Prevent duplicate cancellation
 
-### 🧾 Logging System
+ Logging System
 
 * Tracks system actions:
 
@@ -71,7 +70,7 @@ The system demonstrates strong backend engineering concepts like **data consiste
   * Cancellation
 * Helps in debugging and auditing
 
-### ⚠️ Failure Injection System
+ Failure Injection System
 
 * Simulates failures in:
 
@@ -81,11 +80,11 @@ The system demonstrates strong backend engineering concepts like **data consiste
 
 ---
 
-## 🏗️ Architecture
+Architecture
 
 The system follows a **modular, service-based architecture**:
 
-### 🔹 Services
+ Services
 
 * Product Service
 * Cart Service
@@ -94,13 +93,13 @@ The system follows a **modular, service-based architecture**:
 * Inventory Service
 * Coupon Service
 
-### 🔹 Core Modules
+ Core Modules
 
 * Logger
 * Failure Injection
 * Utility Functions
 
-👉 This design ensures:
+This design ensures:
 
 * Loose coupling
 * Clean separation of concerns
@@ -108,24 +107,24 @@ The system follows a **modular, service-based architecture**:
 
 ---
 
-## 🔄 Order Processing Flow
+ Order Processing Flow
 
 Add Product → Add to Cart → Place Order
 → Reserve Stock → Process Payment
 
-### ✔ If Payment Success:
+If Payment Success:
 
 * Order is placed
 * Cart is cleared
 
-### ❌ If Payment Fails:
+ If Payment Fails:
 
 * Inventory is restored
 * Transaction is rolled back
 
 ---
 
-## ⚙️ Assumptions
+ Assumptions
 
 * In-memory data storage (no database)
 * CLI-based single-user simulation
@@ -135,7 +134,7 @@ Add Product → Add to Cart → Place Order
 
 ---
 
-## ▶️ How to Run
+ How to Run
 
 ### Step 1: Navigate to project folder
 
@@ -151,7 +150,7 @@ python main.py
 
 ---
 
-## 🧪 Sample Test Flow
+Sample Test Flow
 
 1. Add products
 2. Add items to cart
@@ -164,7 +163,7 @@ python main.py
 
 ---
 
-## 💡 Concepts Demonstrated
+ Concepts Demonstrated
 
 * Transaction Management
 * Rollback Mechanisms
@@ -175,7 +174,7 @@ python main.py
 
 ---
 
-## 🔮 Future Enhancements
+Future Enhancements
 
 * REST API (Django/Flask)
 * Database integration (MySQL/PostgreSQL)
@@ -185,13 +184,13 @@ python main.py
 
 ---
 
-## 👨‍💻 Author
+ Author
 
 **Talari Venkata Sumanth**
 
 ---
 
-## 🏁 Conclusion
+Conclusion
 
 This project demonstrates how real-world e-commerce systems handle:
 
