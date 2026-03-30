@@ -2,90 +2,90 @@
 
 ## 📌 Project Overview
 
-This project is a CLI-based backend simulation of a distributed e-commerce order processing system. It is designed to mimic real-world backend challenges such as inventory conflicts, payment failures, transaction rollbacks, and order lifecycle management.
+This project is a **CLI-based backend simulation** of a distributed e-commerce order processing system.
+It is designed to mimic real-world backend challenges such as inventory conflicts, payment failures, transaction rollback, and order lifecycle management.
 
-The system follows a modular, service-based architecture and demonstrates key backend engineering concepts like consistency, fault tolerance, and failure handling.
+The system demonstrates strong backend engineering concepts like **data consistency, fault tolerance, and modular architecture**.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Features
 
 ### 🛍️ Product Management
 
 * Add new products
-* Update product stock
-* Prevent duplicate product entries
+* Prevent duplicate product IDs
+* Update stock
 
 ### 🧺 Cart System
 
-* User-specific carts
+* Separate cart for each user
 * Add/remove items
-* Quantity management
-* Cart total calculation
+* Update item quantities
+* Calculate cart total
 
-### 📦 Order Processing Engine
+### 📦 Order Placement Engine
 
-* Validates cart before order placement
-* Calculates total cost
-* Supports coupon-based discounts
-* Handles order creation flow
+* Validate cart before order
+* Calculate total price
+* Apply coupon discounts
+* Create order
 
 ### 💳 Payment Simulation
 
-* Simulates real-world payment scenarios
-* Random success/failure handling
-* Integrated with failure injection system
+* Simulates real-world payment success/failure
+* Randomized outcomes
+* Integrated failure handling
 
 ### 🔒 Inventory Management
 
-* Stock reservation before payment
-* Prevents overselling
-* Automatic stock restoration on failure
+* Reserve stock before payment
+* Prevent overselling
+* Restore stock on failure
 
-### 🔁 Transaction Rollback System
+### 🔁 Transaction Rollback
 
-* Restores inventory if payment fails
-* Ensures system consistency
-* Handles partial failures gracefully
+* If payment fails:
+
+  * Restore inventory
+  * Cancel order safely
 
 ### 🎟️ Coupon System
 
 * `SAVE10` → 10% discount
 * `FLAT200` → ₹200 discount
-* Applied during order placement
 
-### 📄 Order Lifecycle Management
+### 📄 Order Management
 
-* Order states:
-
-  * CREATED
-  * PLACED
-  * CANCELLED
-* Supports order cancellation and refund simulation
+* View all orders
+* Cancel order
+* Prevent duplicate cancellation
 
 ### 🧾 Logging System
 
-* Tracks all major operations:
+* Tracks system actions:
 
   * Order creation
   * Payment status
-  * Rollback actions
+  * Rollback events
   * Cancellation
-* Provides system transparency
+* Helps in debugging and auditing
 
-### ⚠️ Failure Injection Mode
+### ⚠️ Failure Injection System
 
-* Simulates system failures
-* Helps test robustness of order flow
-* Can be toggled ON/OFF
+* Simulates failures in:
+
+  * Payment
+  * Order creation
+* Helps test system reliability
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Architecture
 
-The system follows a **modular microservices-inspired design**:
+The system follows a **modular, service-based architecture**:
 
-### Services:
+### 🔹 Services
 
 * Product Service
 * Cart Service
@@ -94,61 +94,58 @@ The system follows a **modular microservices-inspired design**:
 * Inventory Service
 * Coupon Service
 
-### Core Modules:
+### 🔹 Core Modules
 
 * Logger
 * Failure Injection
-* Event Processing
 * Utility Functions
 
-Each module is loosely coupled, making the system easy to maintain and extend.
+👉 This design ensures:
+
+* Loose coupling
+* Clean separation of concerns
+* Easy scalability
 
 ---
 
 ## 🔄 Order Processing Flow
 
-1. Add product to system
-2. Add items to cart
-3. Apply coupon (optional)
-4. Place order
-5. Reserve inventory
-6. Process payment
+Add Product → Add to Cart → Place Order
+→ Reserve Stock → Process Payment
 
 ### ✔ If Payment Success:
 
-* Order is confirmed
+* Order is placed
 * Cart is cleared
 
 ### ❌ If Payment Fails:
 
 * Inventory is restored
-* Order is rolled back
+* Transaction is rolled back
 
 ---
 
 ## ⚙️ Assumptions
 
 * In-memory data storage (no database)
-* Single-user CLI simulation
-* Concurrency handled logically (no threading)
-* Randomized failure simulation
+* CLI-based single-user simulation
+* Logical concurrency handling
+* Random failure simulation
 * No external APIs used
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run
 
-### Step 1: Clone or download the repository
+### Step 1: Navigate to project folder
 
-### Step 2: Navigate to project folder
-
-```bash
+```bash id="run1"
 cd Ecommerce_Order_Engine
 ```
 
-### Step 3: Run the application
+### Step 2: Run the application
 
-```bash
+```bash id="run2"
 python main.py
 ```
 
@@ -173,18 +170,18 @@ python main.py
 * Rollback Mechanisms
 * Fault Tolerance
 * Inventory Consistency
-* Modular Architecture
-* Backend System Design
+* Modular System Design
+* Backend Engineering Principles
 
 ---
 
 ## 🔮 Future Enhancements
 
-* REST API using Django/Flask
+* REST API (Django/Flask)
 * Database integration (MySQL/PostgreSQL)
 * Multi-user concurrency (threading)
 * Authentication system
-* UI (React/Flutter)
+* Frontend UI (React/Flutter)
 
 ---
 
@@ -196,11 +193,11 @@ python main.py
 
 ## 🏁 Conclusion
 
-This project demonstrates how real-world e-commerce platforms handle:
+This project demonstrates how real-world e-commerce systems handle:
 
 * Order processing
 * Failures and recovery
 * Inventory synchronization
 * System reliability
 
-It showcases strong backend engineering fundamentals and practical system design thinking.
+It reflects strong problem-solving skills and backend system design understanding.
